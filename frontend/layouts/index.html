@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<p>{{ .Content }}</p>
+
+{{ with .Site.GetPage "about" }}
+<section id="about">
+    <h2>{{ .Title }}</h2>
+    <p>{{ .Content }}</p>
+</section>
+{{ end }}
+
+{{ end }}
